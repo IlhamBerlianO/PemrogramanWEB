@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>KalkulatorKu</title>
+    </head>
+    <script language="JavaScript">
+        function perhitung(opt){
+            var x = document.form.x.value;
+            var y = document.form.y.value;
+            
+            if (opt == "tambah") {
+                document.form.hasil.value = Number(x) + Number(y);
+            } else if (opt == "kurang") {
+                document.form.hasil.value = x - y;
+            } else if (opt == "kali") {
+                document.form.hasil.value = x * y;
+            } else if (opt == "bagi") {
+                document.form.hasil.value = x / y;
+            }
+            }
+
+            function resetForm(){
+                document.form.reset();
+            }
+    </script>
+    <body>
+        <div align="center" style="width: 500px; margin: 0 auto; border-style: solid;">
+            <h1>Kalkulator Sederhana</h1>
+
+            <form name="form" method="post">
+                <p>Angka 1 <input type="text" name="x"></p>
+                <p>Angka 2 <input type="text" name="y"></p>
+                <p>Hasil <input type="text" name="hasil" disabled="true"></p>
+                <input name="opt" type="button" value="tambah" onClick="perhitung(this.value)"></input>
+                <input name="opt" type="button" value="kurang" onClick="perhitung(this.value)" ></input>
+                <input name="opt" type="button" value="kali" onClick="perhitung(this.value)" ></input>
+                <input name="opt" type="button" value="bagi" onClick="perhitung(this.value)"></input>
+                <input type="button" value="CLEAR" onClick="resetForm()">
+            </form>
+            <br><br>
+        </div>
+    </body>
+</html>
