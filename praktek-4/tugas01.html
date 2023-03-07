@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title> Effect Klik </title>
+        <script src="jquery-3.6.3.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".sembunyi1").click(function () {
+                        $("#foto1").hide("slow");
+                });
+                $(".tampil1").click(function () {
+                        $("#foto1").show("slow");
+                });
+                $(".sembunyi2").click(function () {
+                        $("#foto2").hide("slow");
+                });
+                $(".tampil2").click(function () {
+                        $("#foto2").show("slow");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button class="sembunyi1"> Sembunyikan </button>
+        <button class="tampil1"> Tampilkan </button>
+        <p>
+            <img src="tgs1.jpg" id="foto1" width="200px">
+        </p>
+        <button class="sembunyi2"> Sembunyikan </button>
+        <button class="tampil2"> Tampilkan </button>
+        <p>
+            <img src="tgs2.png" id="foto2" width="200px">
+        </p>
+    </body>
+</html>
